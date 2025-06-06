@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gesture Photo Carousel</title>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="instructions">
+    <h3>🖐 Gebaren uitleg</h3>
+    <ul>
+        <li>👆 <strong>Vinger omhoog</strong>: vorige foto</li>
+        <li>👇 <strong>Vinger omlaag</strong>: volgende foto</li>
+        <li>🫰 <strong> hartje maken</strong>: like/unlike foto</li>
+    </ul>
+</div>
+
+<body>
+
+<div class="webcam-container">
+    <video id="webcam" autoplay playsinline muted></video>
+    <h2 id="prediction">🔮 –</h2>
+</div>
+
+<canvas id="overlay" width="640" height="480"></canvas>
+<div class="carousel" id="photoList"></div>
+
+<script type="module" src="predict.js"></script>
+</body>
+</html>

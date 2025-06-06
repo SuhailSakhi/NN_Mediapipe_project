@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+
+.webcam-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.webcam-container video {
+    width: 160px;
+    height: 120px;
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
+.webcam-container h2 {
+    font-size: 1rem;
+    margin-top: 4px;
+    color: #00ffcc;
+    text-align: left;
+}
+
+canvas {
+    display: none;
+}
+
+.carousel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.photo {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 16px;
+}
+
+.photo.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 2rem;
+    color: red;
+    display: none;
+}
+
+.photo.liked .heart {
+    display: block;
+}
+
+.instructions {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 16px;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.95rem;
+    z-index: 20;
+    max-width: 220px;
+    text-align: left;
+}
+
+.instructions h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #00ffcc;
+}
+
+.instructions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.instructions li {
+    margin-bottom: 6px;
+}
